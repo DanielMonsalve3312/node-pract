@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node class.js",
+    "dev": "nodemon server.js",
+    "dev:express": "nodemon express.js",
+    "class": "nodemon class.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "4.18.2",
+    "zod": "3.22.4"
+  }
+}

@@ -1,0 +1,33 @@
+# POST http://localhost:3000/user
+# Content-Type: application/json
+
+# {
+#     "name": "Daniel",
+#     "lastName": "Monsalve"
+# }
+
+GET http://localhost:3000/users
+
+### User detail
+GET http://localhost:3000/users/1
+
+### Users by Gender
+GET http://localhost:3000/users?gender=Hombre
+
+### Create User
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Daniel",
+    "lastName": "Kenton",
+    "email": "dasd@as.cr"
+}
+
+### Update an User
+PATCH http://localhost:3000/users/1
+Content-Type: application/json
+
+{
+    "name": "Max"
+}

@@ -1,15 +1,15 @@
-const z = require('zod');
+import zod from 'zod';
 
-const userSchema = z.object({
-    name: z.string({
+const userSchema = zod.object({
+    name: zod.string({
         invalid_type_error: "Invalid type",
         required_error: "This field is require: name"
     }),
-    lastName: z.string({
+    lastName: zod.string({
         invalid_type_error: "Invalid type",
         required_error: "This field is require: name"
     }),
-    email: z.string({
+    email: zod.string({
         required_error: "This field is require: name"
     }).email({
         message: "Invalid format"
@@ -24,7 +24,7 @@ function validatePartialUserSchema (object) {
     return userSchema.partial().safeParse(object)
 }
 
-module.exports = {
+export {
     validateUserSchema,
     validatePartialUserSchema
 };
